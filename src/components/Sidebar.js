@@ -1,5 +1,6 @@
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import { useState } from "react";
+import Maincontent from "./MainContent";
+
 import {
   Bars3Icon,
   HomeIcon,
@@ -33,7 +34,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Side() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -121,18 +122,17 @@ export default function Example() {
           </a>
         </div>
 
-        <main className="pl-[65rem]">
+        <main className="lg:pl-20">
           <div>
-            <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
-              <h1>My Card</h1>
+            <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6  w-[73%]">
+              <Maincontent />
             </div>
           </div>
         </main>
 
-        <aside className="fixed inset-y-0 left-20 hidden w-[60rem] overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
-          <h1>Hi, John!</h1>
-          <p>Here's your dashboard</p>
+        <aside className="fixed inset-y-0 right-0 hidden w-96 overflow-y-auto border-l border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
           {/* Secondary column (hidden on smaller screens) */}
+          <p>hALO</p>
         </aside>
       </div>
     </>
