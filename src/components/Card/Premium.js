@@ -18,7 +18,7 @@ const Premium = () => (
     </p>
     <a
       href="#"
-      className=" mt-5 mb-3 flex w-full items-center justify-center rounded-md text-white bg-sky-500 px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
+      className=" mt-5 mb-3 flex w-full items-center justify-center rounded-md text-white bg-sky-500 px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300  focus-visible:outline-offset-0"
     >
       Get now
     </a>
