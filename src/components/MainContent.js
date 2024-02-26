@@ -1,11 +1,27 @@
 import React from "react";
-import { MagnifyingGlassIcon, UserIcon } from "@heroicons/react/24/outline";
+import PieChart from "./Card/Chart/Piechart";
+import SpendingCard from "./Card/SpendingCard";
+import TransactionCard from "./Card/TransactionCard";
+import {
+  MagnifyingGlassIcon,
+  PlusCircleIcon,
+  WalletIcon,
+  BanknotesIcon,
+  MinusCircleIcon,
+} from "@heroicons/react/24/outline";
 
 const stats = [
-  { icon: UserIcon, name: "Balance", stat: "71,897" },
-  { icon: UserIcon, name: "Income", stat: "58.16%" },
-  { icon: UserIcon, name: "Outcome", stat: "24.57%" },
-  { icon: UserIcon, name: "Savings", stat: "24.57%" },
+  { icon: WalletIcon, name: "Balance", stat: "$1,500.15" },
+  { icon: PlusCircleIcon, name: "Income", stat: "$200,00" },
+  { icon: MinusCircleIcon, name: "Outcome", stat: "$500,00" },
+  { icon: BanknotesIcon, name: "Savings", stat: "$1,125,50" },
+];
+
+const data = [
+  { id: "Shopping", label: "Shopping", value: 200 },
+  { id: "Workspace", label: "Workspace", value: 400 },
+  { id: "Food", label: "Food", value: 300 },
+  { id: "Entertainment", label: "Entertainment", value: 300 },
 ];
 
 const MainContent = () => {
@@ -44,7 +60,7 @@ const MainContent = () => {
                 className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 "
               >
                 <dt>
-                  <div className="absolute rounded-full bg-indigo-500 p-2">
+                  <div className="absolute rounded-full bg-sky-400 p-2">
                     <item.icon
                       className="h-4 w-4 text-white"
                       aria-hidden="true"
@@ -54,13 +70,22 @@ const MainContent = () => {
                 <dt className="truncate text-sm font-medium text-gray-500 pt-12">
                   {item.name}
                 </dt>
-                <dd className="mt-1 text-3xl font-semibold tracking-tight text-gray-900">
+                <dd className="mt-1 text-2xl font-semibold tracking-tight text-gray-800">
                   {item.stat}
                 </dd>
               </div>
             ))}
           </dl>
         </div>
+      </div>
+
+      <div className="expense grid grid-cols-2 gap-4 mt-10">
+        <PieChart data={data} />
+        <SpendingCard />
+      </div>
+
+      <div className="transaction mt-10">
+        <TransactionCard />
       </div>
     </div>
   );
