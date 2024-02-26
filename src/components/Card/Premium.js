@@ -7,7 +7,10 @@ import { CurrencyDollarIcon } from "@heroicons/react/24/solid";
 const Premium = () => (
   <div className="bg-white shadow-md rounded-md p-2 mt-4">
     <p className="text-center text-lg font-bold">Premium</p>
-    <CurrencyDollarIcon className="h-10 w-10" aria-hidden="true" />
+    <CurrencyDollarIcon
+      className="h-10 w-10 text-green-500"
+      aria-hidden="true"
+    />
 
     <h1 className="text-lg font-semibold">Need more features?</h1>
     <p className=" text-sm font-medium text-gray-500 w-[240px] ">
