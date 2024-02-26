@@ -4,7 +4,7 @@ import React from "react";
 
 const Credit = () => {
   return (
-    <div className="w-auto h-56 mt-3 bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
+    <div className="w-auto h-52 mt-3 bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
       <div className="w-full px-8 absolute top-2">
         <div style={{ textAlign: "-webkit-right" }}>
           <img className="w-14 h-14" src="https://i.imgur.com/bbPHJVe.png" />
